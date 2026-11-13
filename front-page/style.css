@@ -1,5 +1,10 @@
 body {
     text-align: center; /* Centering */
+    min-height: 100vh;
+    margin: 0;
+    background-image: radial-gradient(circle, rgb(29, 199, 255) 5%, rgb(143, 225, 255) 20%, rgb(222, 247, 255) 75%);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .logo {
@@ -27,7 +32,7 @@ body {
 }
 
 .nav-hyperlk-btn {
-    background: linear-gradient(135deg, lightblue, blue);
+    background: linear-gradient(135deg, lightblue, rgb(0, 0, 255));
     color: white;
 
     /* Border */
