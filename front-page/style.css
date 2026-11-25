@@ -1,5 +1,5 @@
 body {
-    text-align: center; /* Centering */
+    text-align: center;
     min-height: 100vh;
     margin: 0;
     background-image: radial-gradient(circle, rgb(29, 199, 255) 5%, rgb(143, 225, 255) 20%, rgb(222, 247, 255) 75%);
@@ -8,13 +8,20 @@ body {
 }
 
 .logo {
-    display: flex;
-    align-items: center;
     gap: 10px;
 }
 
 .logo h2 {
     margin: 0;
+}
+
+.logo span {
+    margin: 0;
+}
+
+.logo span h1 {
+    position: relative;
+        top: -20px;
 }
 
 .logo small {
@@ -36,7 +43,7 @@ body {
     color: white;
 
     /* Border */
-    border: 1px, black solid;
+    border: 1px black solid;
     border-radius: 5px;
 
     /* Padding & Margin */
