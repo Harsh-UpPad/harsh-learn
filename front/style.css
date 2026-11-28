@@ -1,29 +1,34 @@
 :root {
+    /* Font varibles */
     --text-font: "Google Sans", sans-serif;
     --heading-font: "Space Mono", monospace;
 }
 
 * {
+    /* Box model */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    /* Box model */
+    font-family: var(--text-font);
     color: #172554;
     background: #F8FBFF;
     overflow-x: hidden
 }
 
-h1, h2, h3 {
+h1, h2, h3,
+h4, h5, h6 {
+    /* Heading font */
     font-family: var(--heading-font);
 }
 
 /* nav-bar */
 .navbar {
+    /* Flexbox */
     display: flex;
-
     align-items: center;
 
     /* Padding & Margin */
@@ -40,6 +45,7 @@ h1, h2, h3 {
 }
 
 .logo-icon {
+    /* Box model */
     padding: 10px;
     margin: 10px;
     border: 1px black solid;
@@ -48,41 +54,50 @@ h1, h2, h3 {
 }
 
 .navbar button {
+    /* Box model */
     padding: 10px;
     margin: 10px;
     border: 1px black solid;
     border-radius: 10px;
 
-    transition: transform 0.2 s cubic-bezier(0.68, -0.55, 0.27, -0.55);
+    /* Animation */
+    transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.27, -0.55);
 }
 
+/* Nav animation */
 .navbar button:hover {
     transform: scale(1.1);
 }
 
 .nav-links {
+    /* Box model */
     margin-left: auto;
 }
 
 /* Hero */
-
 .hero {
+    /* Box model */
     margin-top: 100px;
-    display: flex;
     text-align: center;
+
+    /* Display */
+    display: flex;
 }
 
 .hero-stats {
+    /* Flex Box */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .hero-stats div {
+    /* Box model */
     margin: 10px;
 }
 
 .hero-visual {
+    /* Box model */
     margin-left: auto;
     margin-right: 5%;
 }
@@ -90,28 +105,34 @@ h1, h2, h3 {
 .feature-grid,
 .course-grid,
 .blog-grid {
+    /* Gride */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 24px;
     max-width: 1200px;
+
+    /* Box Model */
     margin: 0 auto;
     padding: 20px;
 }
-/* Shared card look (matching your sharp 1px border + bounce style) */
+
 .feature-card,
 .course-card,
 .blog-card {
+    /* Box Model */
     background: white;
     border: 1px solid black;
     border-radius: 14px;
     padding: 24px;
+
+    /* Grid */
     display: flex;
     flex-direction: column;
     gap: 12px;
-    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, -0.55), box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Lift + hard shadow on hover */
+/* Card animations */
 .feature-card:hover,
 .course-card:hover,
 .blog-card:hover {
@@ -122,6 +143,7 @@ h1, h2, h3 {
 .features,
 .courses,
 .blogs {
+    /* Display */
     display: flex;
     flex-direction: column;
     align-items: center;
